@@ -31,8 +31,8 @@ void main(){
     double *postsumreal=(double*) fftw_malloc(sizeof(double)*howmany);
     double *postsumcomp=(double*) fftw_malloc(sizeof(double)*howmany);
 
-    fftw_plan planfft = fftw_plan_many_dft(rank,n,howmany,in,inembed,istride,idist,in,inembed,istride,idist,FFTW_FORWARD,FFTW_EXHAUSTIVE);
-    fftw_plan planifft = fftw_plan_many_dft(rank,n,howmany,in,inembed,istride,idist,in,inembed,istride,idist,FFTW_BACKWARD,FFTW_EXHAUSTIVE);
+    fftw_plan planfft = fftw_plan_many_dft(rank,n,howmany,in,inembed,istride,idist,in,inembed,istride,idist,FFTW_FORWARD,FFTW_PATIENT);
+    fftw_plan planifft = fftw_plan_many_dft(rank,n,howmany,in,inembed,istride,idist,in,inembed,istride,idist,FFTW_BACKWARD,FFTW_PATIENT);
 
     for(i=0; i<howmany; i++){
         for(j=0; j<dim; j++){
