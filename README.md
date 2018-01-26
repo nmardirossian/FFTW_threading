@@ -3,7 +3,7 @@ FFTW_threading
 A simple program to verify that the built-in threading in FFTW3 is working.
 
 How to compile:
-gcc -lfftw3_omp -lfftw3 -lm -fopenmp threading_test.c
+gcc -lfftw3_omp -lfftw3 -lm -fopenmp threading_test.c -o threading_test.o
 
 How to run:
 export OMP_NUM_THREADS=NUMTHREADS
