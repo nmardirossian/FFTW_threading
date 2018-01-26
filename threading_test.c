@@ -16,7 +16,7 @@ void main(){
     int rank=3;
     int n[]={dim1,dim2,dim3};
     long int idist=dim;
-    int istride=1;
+    int istride=2;
     const int *inembed=NULL;
 
     double finaltime;
